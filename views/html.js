@@ -1,4 +1,4 @@
-module.exports =function(title,content){
+module.exports =function(title,content, message = ""){
 
     return`
 <!DOCTYPE html>
@@ -15,13 +15,19 @@ module.exports =function(title,content){
 
 </header>
 <main>
-
+    ${message}
     ${content ? content : ""}
 
 </main>
 <footer>
 
 </footer>
+<script>
+
+    document.cookie ="csrf=aabbccdd1234567890ytytytytytytytytytytytytytyttyt";
+    console.log(document.cookie);
+
+</script>
 </body>
 </html>
 `;
